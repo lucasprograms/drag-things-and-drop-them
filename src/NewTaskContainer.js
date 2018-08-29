@@ -12,7 +12,7 @@ export default class NewTaskContainer extends Component {
         }
 
         const getNewTaskId = (taskId) => {
-            const taskIdNumber = parseInt(taskId[taskId.length - 1]) + 1
+            const taskIdNumber = parseInt(taskId[taskId.length - 1], 10) + 1
             return 'task-' + taskIdNumber
         }
 
