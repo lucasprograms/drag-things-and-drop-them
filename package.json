@@ -2,7 +2,7 @@
   "name": "dnd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "drag-things-and-drop-them",
+  "homepage": "http://lucasmcca.in/drag-things-and-drop-them",
   "dependencies": {
     "react": "^16.4.2",
     "react-beautiful-dnd": "^9.0.1",
