@@ -8,7 +8,7 @@ export default class NewTaskContainer extends Component {
         const getLastTaskId = () => {
             const taskKeys = Object.keys(this.props.data.tasks)
 
-            return taskKeys[taskKeys.length - 1]
+            return taskKeys.length ? taskKeys[taskKeys.length - 1] : 0
         }
 
         const getNewTaskId = (taskId) => {
