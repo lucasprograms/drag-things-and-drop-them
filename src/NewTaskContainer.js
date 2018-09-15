@@ -7,13 +7,16 @@ export default class NewTaskContainer extends Component {
     buildNewData (columnId, taskContent) {
         const getLastTaskId = () => {
             const taskKeys = Object.keys(this.props.data.tasks)
-            return taskKeys.length ? taskKeys[taskKeys.length - 1] : 0
+            return taskKeys.length ? taskKeys[taskKeys.length - 1] : null
         }
 
         const getNewTaskId = (taskId) => {
-            const taskIds = this.props.data.columns[columnId]['taskIds']
-            const taskIdNumber = taskIds.length
-            return 'task-' + taskIdNumber
+            if (taskId !== null) {
+                const taskIdComponents = taskId.split('-')
+                return [taskIdComponents[0], parseInt(taskIdComponents[1], 10) + 1].join('-')
+            } else {
+                return 'task-0'
+            }
         }
 
         const lastTaskId = getLastTaskId()
